@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { CatalogsLoadError, CatalogsLoading, CatalogsLoadSucces } from '../actions/CatalogsActions'
 
-export const getCourse = (id) => (dispatch) => {
+export const getCatalogo = (id) => (dispatch) => {
   dispatch(CatalogsLoading())
 
   const options = {

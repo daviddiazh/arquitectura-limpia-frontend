@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import { getCatalogo } from '../utils/get'
+import { getCatalogo } from './utils/get'
 import { useDispatch, useSelector } from 'react-redux'
 import Pelicula from './Pelicula'
 
-export const Catalogs = () => {
+function Catalogs () {
   const dispatch = useDispatch()
   const { isLoading, catalogs, error } = useSelector(state => state.catalogs)
 
@@ -28,11 +28,11 @@ export const Catalogs = () => {
             <div>
               <h5>{catalog.nombre}</h5>{catalog.pelicula &&
                     Object.keys(catalog.pelicula).map((key) => {
-                        return (
-                          <div key={key}>
-                            <Pelicula pelicula={catalog.pelicula[key]} />
-                          </div>
-                        )
+                      return (
+                        <div key={key}>
+                          <Pelicula pelicula={catalog.pelicula[key]} />
+                        </div>
+                      )
                     })}
             </div>
           </div>
@@ -43,3 +43,4 @@ export const Catalogs = () => {
     </>
   )
 }
+export default Catalogs
