@@ -3,7 +3,7 @@ import Catalogs from './Catalogs'
 function App () {
   return (
     <div className='App'>
-      <h1>Lista de peliculas</h1>
+      <h1 style={{textAlign: "center"}}>Lista de peliculas</h1>
       <Catalogs />
     </div>
   )

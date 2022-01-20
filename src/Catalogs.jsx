@@ -26,7 +26,7 @@ function Catalogs () {
         return (
           <div key={catalog._id}>
             <div>
-              <h5>{catalog.nombre}</h5>{catalog.pelicula &&
+              <h2 style={{textAlign: "center", margin: "70px 0 0 0"}}>{catalog.nombre}</h2>{catalog.pelicula &&
                     Object.keys(catalog.pelicula).map((key) => {
                       return (
                         <div key={key}>
